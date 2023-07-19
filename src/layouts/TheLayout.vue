@@ -1,10 +1,15 @@
 <template>
   <v-layout class="rounded rounded-md">
-    <v-app-bar height="100"> </v-app-bar>
+    <v-app-bar flat height="100"> </v-app-bar>
     <v-main @click.stop="drawer = !drawer">
       <slot></slot>
     </v-main>
     <v-navigation-drawer width="300" permanent class="px-2 py-6">
+      <v-img
+        src="./../assets/logo-primary.svg"
+        max-width="300"
+        class="px-2"
+      ></v-img>
       <v-list
         :lines="false"
         density="compact"
