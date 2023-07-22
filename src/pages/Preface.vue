@@ -1,11 +1,18 @@
 <template>
   <v-card class="ma-4 pa-6">
+    <div class="mb-2 text-h3" align="center">Preface</div>
+
+    <v-divider class="ma-2"></v-divider>
+
     <div class="mb-2 text-h4">About VANEX</div>
     <v-alert
       >Vanex is a leading courier services company located in Libya, we provide
       you with a round trip courier services with cash on delivery with an
       elegant tracking application in order to optimize your business.
     </v-alert>
+    
+    <v-divider class="ma-2"></v-divider>
+
     <div class="my-2 mt-4 text-h4">About VANEX API</div>
     <v-alert
       >Vanex API is organized to provide you with the ability to connect your
