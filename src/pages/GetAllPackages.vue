@@ -71,120 +71,167 @@
         <code>
           <pre>
 {
-    "data": {
-        "package-code": "1-BEN-1234567",
-        "package_type": {
-            "id": 1,
-            "name": "شحن تجاري",
-            "name_en": "ONSPEED",
-            "active": 1,
-            "parent": 0
-        },
-        "package_sub_type": {
-            "id": 1,
-            "name": "شحن تجاري",
-            "name_en": "ONSPEED",
-            "active": 1,
-            "parent": 0
-        },
-        "reciever": "مستلم تجريبي",
-        "phone": "0910000000",
-        "phone_b": "0920000000",
-        "address": "عنوان تجريبي - راس عبيدة",
-        "price": 1158,
-        "origin_price": 1200,
-        "shippment": 42,
-        "total": 1200,
-        "extra_size_price": 0,
-        "region_commission": 12,
-        "payment_methode": "cash",
-        "paid_by": "market",
-        "extra_size_by": "market",
-        "commission_by": "market",
-        "paid_by_ar": "المتجر",
-        "extra_size_by_ar": "المتجر",
-        "commission_by_ar": "المتجر",
-        "status": "قيد الإجراء",
-        "status_object": {
-            "id": 1,
-            "status_value": "store_new",
-            "status_name_admin": "قيد الإجراء",
-            "status_name_cust": "قيد الإجراء",
-            "type": "OPS",
-            "status_log": "Package has been created",
-            "notes": ""
-        },
-        "create_date": "2023-07-17",
-        "address_code": null,
-        "instore_date": null,
-        "delivery_date": null,
-        "update_date": "2023-07-17 16:00:59",
-        "qty": 10,
-        "qty_return": 0,
-        "recieved_money": 0,
-        "description": "تجربة وصف",
-        "non_delivery_reason": 0,
-        "non_delivery_text": null,
-        "stock_location": null,
-        "pkg_orign": 0,
-        "sticker_notes": "ملاحظة البوليصة",
-        "leangh": 36,
-        "width": 35,
-        "height": 35,
-        "store_reference_id": null,
-        "map": "https://maps.google.com/?q=xxx,xxx",
-        "origin": null,
-        "breakable": 1,
-        "receipt_money": 0,
-        "measuring_is_allowed": 1,
-        "storage_subscription": 0,
-        "inspection_allowed": 1,
-        "heat_intolerance": 1,
-        "store_sub_sender": null,
-        "casing": 0,
-        "photo": null,
-        "sender": {
-            "id": 1,
-            "name": "شركة منصة للحلول الذكية"
-        },
-        "City": {
-            "id": 2,
-            "name": "بنغازي",
-            "code": null,
-            "name_en": null,
-            "region": null,
-            "price": 30,
-            "est_time": null,
-            "locations": [
+    "status_code": 200,
+    "message": "طلبات تجميع الخاصة بالمستخدم.",
+    "data":
+        "data": [
+            {
                 {
-                    "id": 120,
-                    "name": "وسط المدينة",
+                "package-code": "1-BEN-1234567",
+                "package_type": {
+                "id": 1,
+                "name": "شحن تجاري",
+                "name_en": "ONSPEED",
+                "active": 1,
+                "parent": 0
+                },
+                "package_sub_type": {
+                    "id": 1,
+                    "name": "شحن تجاري",
+                    "name_en": "ONSPEED",
+                    "active": 1,
+                    "parent": 0
+                },
+                "reciever": "مستلم تجريبي",
+                "phone": "0910000000",
+                "phone_b": "0920000000",
+                "address": "عنوان تجريبي - راس عبيدة",
+                "price": 1158,
+                "origin_price": 1200,
+                "shippment": 42,
+                "total": 1200,
+                "extra_size_price": 0,
+                "region_commission": 12,
+                "payment_methode": "cash",
+                "paid_by": "market",
+                "extra_size_by": "market",
+                "commission_by": "market",
+                "paid_by_ar": "المتجر",
+                "extra_size_by_ar": "المتجر",
+                "commission_by_ar": "المتجر",
+                "status": "قيد الإجراء",
+                "status_object": {
+                    "id": 1,
+                    "status_value": "store_new",
+                    "status_name_admin": "قيد الإجراء",
+                    "status_name_cust": "قيد الإجراء",
+                    "type": "OPS",
+                    "status_log": "Package has been created",
+                    "notes": ""
+                },
+                "create_date": "2023-07-17",
+                "address_code": null,
+                "instore_date": null,
+                "delivery_date": null,
+                "update_date": "2023-07-17 16:00:59",
+                "qty": 10,
+                "qty_return": 0,
+                "recieved_money": 0,
+                "description": "تجربة وصف",
+                "non_delivery_reason": 0,
+                "non_delivery_text": null,
+                "stock_location": null,
+                "pkg_orign": 0,
+                "sticker_notes": "ملاحظة البوليصة",
+                "leangh": 36,
+                "width": 35,
+                "height": 35,
+                "store_reference_id": null,
+                "map": "https://maps.google.com/?q=xxx,xxx",
+                "origin": null,
+                "breakable": 1,
+                "receipt_money": 0,
+                "measuring_is_allowed": 1,
+                "storage_subscription": 0,
+                "inspection_allowed": 1,
+                "heat_intolerance": 1,
+                "store_sub_sender": null,
+                "casing": 0,
+                "photo": null,
+                "sender": {
+                    "id": 1,
+                    "name": "شركة منصة للحلول الذكية"
+                },
+                "City": {
+                    "id": 2,
+                    "name": "بنغازي",
                     "code": null,
                     "name_en": null,
                     "region": null,
                     "price": 30,
-                    "est_time": null
+                    "est_time": null,
+                    "locations": [
+                        {
+                            "id": 120,
+                            "name": "وسط المدينة",
+                            "code": null,
+                            "name_en": null,
+                            "region": null,
+                            "price": 30,
+                            "est_time": null
+                        },
+                        {
+                            "id": 121,
+                            "name": "الصابري",
+                            "code": null,
+                            "name_en": null,
+                            "region": null,
+                            "price": 30,
+                            "est_time": null
+                        },
+                      ]
+                  }         
+              ]
+            },
+            "sub_city": {
+                "id": 122,
+                "name": "راس عبيدة"
+            },
+            "products_package": [],
+            "created_at": "2023-07-17T14:00:59.000000Z",
+            "updated_at": "2023-07-17T14:00:59.000000Z"
+            },
+        ],
+        "links": {
+            "first": "https://app.vanex.ly/api/v1/customer/collects?page=1",
+            "last": "https://app.vanex.ly/api/v1/customer/collects?page=5",
+            "prev": null,
+            "next": "https://app.vanex.ly/api/v1/customer/collects?page=2"
+        },
+        "meta": {
+            "current_page": 1,
+            "from": 1,
+            "last_page": 5,
+            "links": [
+                {
+                    "url": null,
+                    "label": "&laquo; السابق",
+                    "active": false
                 },
                 {
-                    "id": 121,
-                    "name": "الصابري",
-                    "code": null,
-                    "name_en": null,
-                    "region": null,
-                    "price": 30,
-                    "est_time": null
+                    "url": "https://app.vanex.ly/api/v1/customer/collects?page=1",
+                    "label": "1",
+                    "active": true
                 },
-                
-            ]
-        },
-        "sub_city": {
-            "id": 122,
-            "name": "راس عبيدة"
-        },
-        "products_package": [],
-        "created_at": "2023-07-17T14:00:59.000000Z",
-        "updated_at": "2023-07-17T14:00:59.000000Z"
-    }
+                {
+                    "url": "https://app.vanex.ly/api/v1/customer/collects?page=2",
+                    "label": "2",
+                    "active": false
+                },
+                {
+                    "url": "https://app.vanex.ly/api/v1/customer/collects?page=2",
+                    "label": "التالي &raquo;",
+                    "active": false
+                }
+            ],
+            "path": "https://app.vanex.ly/api/v1/customer/collects",
+            "per_page": 10,
+            "to": 10,
+            "total": 41
+        }
+    },
+    "errors": false,
+    "code": null
 }
           </pre>
         </code>
@@ -687,6 +734,73 @@
             <td>updated_at</td>
             <td>String</td>
             <td>The date and time of package update.</td>
+          </tr>
+          <tr>
+            <td>current_page</td>
+            <td>Number</td>
+            <td>The current page number.</td>
+          </tr>
+          <tr>
+            <td>from</td>
+            <td>Number</td>
+            <td>The starting index of the items on the current page.</td>
+          </tr>
+          <tr>
+            <td>last_page</td>
+            <td>Number</td>
+            <td>The last page number.</td>
+          </tr>
+          <tr>
+            <td>links</td>
+            <td>Array</td>
+            <td>
+              An array of links with their URLs, labels, and activity status.
+            </td>
+          </tr>
+          <tr>
+            <td>url</td>
+            <td>String</td>
+            <td>The URL of the link..</td>
+          </tr>
+          <tr>
+            <td>label</td>
+            <td>String</td>
+            <td>The label of the link.</td>
+          </tr>
+          <tr>
+            <td>active</td>
+            <td>Boolean</td>
+            <td>Indicator for the currently active link.</td>
+          </tr>
+          <tr>
+            <td>path</td>
+            <td>String</td>
+            <td>The base path of the API endpoint.</td>
+          </tr>
+          <tr>
+            <td>per_page</td>
+            <td>Number</td>
+            <td>The number of items per page.</td>
+          </tr>
+          <tr>
+            <td>to</td>
+            <td>Number</td>
+            <td>The ending index of the items on the current page.</td>
+          </tr>
+          <tr>
+            <td>total</td>
+            <td>Number</td>
+            <td>The total number of items across all pages.</td>
+          </tr>
+          <tr>
+            <td>errors</td>
+            <td>Boolean</td>
+            <td>Indicator for any errors.</td>
+          </tr>
+          <tr>
+            <td>code</td>
+            <td>String</td>
+            <td>Error code.</td>
           </tr>
         </tbody>
       </v-table>
