@@ -2,7 +2,9 @@
   <v-layout class="rounded rounded-md">
     <v-app-bar flat height="100"> </v-app-bar>
     <v-main @click.stop="drawer = !drawer">
-      <slot></slot>
+      <v-expand-x-transition>
+        <slot></slot>
+      </v-expand-x-transition>
     </v-main>
     <v-navigation-drawer width="300" permanent class="px-2 py-6">
       <v-img
@@ -101,12 +103,14 @@ export default {
       if (this.selected == "Login")
         this.$router.push({ name: "Authentication" });
 
-      if (
-        this.selected == "Get Package" ||
-        this.selected == "Get All Package" ||
-        this.selected == "Create New Package"
-      )
-        this.$router.push({ name: "Packages" });
+      if (this.selected == "Get Package")
+        this.$router.push({ name: "GetPackage" });
+
+      if (this.selected == "Get All Package")
+        this.$router.push({ name: "GetAllPackages" });
+
+      if (this.selected == "Create New Package")
+        this.$router.push({ name: "CreatePackage" });
 
       if (
         this.selected == "Get Collect" ||

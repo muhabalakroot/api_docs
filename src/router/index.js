@@ -20,9 +20,25 @@ const routes = [
     },
   },
   {
-    path: "/packages",
-    component: () => import("@/pages/packages.vue"),
-    name: "Packages",
+    path: "/GetPackage",
+    component: () => import("@/pages/GetPackage.vue"),
+    name: "GetPackage",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetAllPackages",
+    component: () => import("@/pages/GetAllPackages.vue"),
+    name: "GetAllPackages",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/CreatePackage",
+    component: () => import("@/pages/CreatePackage.vue"),
+    name: "CreatePackage",
     meta: {
       layout: TheLayout,
     },
