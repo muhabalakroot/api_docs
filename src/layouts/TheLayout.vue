@@ -83,6 +83,25 @@
             prepend-icon="mdi-note-text-outline"
           ></v-list-item>
         </v-list-group>
+
+        <v-list-group value="Utils">
+          <template v-slot:activator="{ props }">
+            <v-list-item
+              prepend-icon="mdi-folder-outline"
+              v-bind="props"
+              title="Utils"
+            ></v-list-item>
+          </template>
+
+          <v-list-item
+            color="primary"
+            v-for="(title, i) in utils"
+            :key="i"
+            :value="title"
+            :title="title"
+            prepend-icon="mdi-note-text-outline"
+          ></v-list-item>
+        </v-list-group>
       </v-list>
     </v-navigation-drawer>
   </v-layout>
@@ -95,6 +114,7 @@ export default {
     auth: [["Login", "mdi-note-text-outline"]],
     packages: ["Get Package", "Get All Package", "Create New Package"],
     collects: ["Get Collect", "Get All Collects", "Create New Collect"],
+    utils: ["Get All Cities", "Get All SubCities"],
   }),
   methods: {
     navigat() {
@@ -112,12 +132,20 @@ export default {
       if (this.selected == "Create New Package")
         this.$router.push({ name: "CreatePackage" });
 
-      if (
-        this.selected == "Get Collect" ||
-        this.selected == "Get All Collects" ||
-        this.selected == "Create New Collect"
-      )
-        this.$router.push({ name: "Collects" });
+      if (this.selected == "Get Collect")
+        this.$router.push({ name: "GetCollect" });
+
+      if (this.selected == "Get All Collects")
+        this.$router.push({ name: "GetAllCollects" });
+
+      if (this.selected == "Create New Collect")
+        this.$router.push({ name: "CreateCollect" });
+
+      if (this.selected == "Get All Cities")
+        this.$router.push({ name: "GetAllCities" });
+
+      if (this.selected == "Get All SubCities")
+        this.$router.push({ name: "GetAllSubCities" });
     },
   },
 };

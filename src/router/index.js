@@ -44,9 +44,41 @@ const routes = [
     },
   },
   {
-    path: "/collects",
-    component: () => import("@/pages/Collects.vue"),
-    name: "Collects",
+    path: "/GetCollect",
+    component: () => import("@/pages/GetCollect.vue"),
+    name: "GetCollect",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetAllCollects",
+    component: () => import("@/pages/GetAllCollects.vue"),
+    name: "GetAllCollects",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/CreateCollect",
+    component: () => import("@/pages/CreateCollect.vue"),
+    name: "CreateCollect",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetAllCities",
+    component: () => import("@/pages/GetAllCities.vue"),
+    name: "GetAllCities",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetAllSubCities",
+    component: () => import("@/pages/GetAllSubCities.vue"),
+    name: "GetAllSubCities",
     meta: {
       layout: TheLayout,
     },
