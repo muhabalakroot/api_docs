@@ -68,6 +68,38 @@ const routes = [
     },
   },
   {
+    path: "/PackageAccepted",
+    component: () => import("@/pages/PackageAccepted.vue"),
+    name: "PackageAccepted",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/PackageDelivered",
+    component: () => import("@/pages/PackageDelivered.vue"),
+    name: "PackageDelivered",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/Settlement",
+    component: () => import("@/pages/Settlement.vue"),
+    name: "Settlement",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/BundleReturned",
+    component: () => import("@/pages/BundleReturned.vue"),
+    name: "BundleReturned",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
     path: "/GetAllCities",
     component: () => import("@/pages/GetAllCities.vue"),
     name: "GetAllCities",

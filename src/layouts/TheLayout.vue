@@ -84,6 +84,25 @@
           ></v-list-item>
         </v-list-group>
 
+        <v-list-group value="webHook">
+          <template v-slot:activator="{ props }">
+            <v-list-item
+              prepend-icon="mdi-folder-outline"
+              v-bind="props"
+              title="webHook"
+            ></v-list-item>
+          </template>
+
+          <v-list-item
+            color="primary"
+            v-for="(title, i) in webHooks"
+            :key="i"
+            :value="title"
+            :title="title"
+            prepend-icon="mdi-note-text-outline"
+          ></v-list-item>
+        </v-list-group>
+
         <v-list-group value="Utils">
           <template v-slot:activator="{ props }">
             <v-list-item
@@ -114,6 +133,12 @@ export default {
     auth: [["Login", "mdi-note-text-outline"]],
     packages: ["Get Package", "Get All Package", "Create New Package"],
     collects: ["Get Collect", "Get All Collects", "Create New Collect"],
+    webHooks: [
+      "Package Accepted",
+      "Package Delivered",
+      "Settlement",
+      "Bundle Returned",
+    ],
     utils: ["Get All Cities", "Get All SubCities"],
   }),
   methods: {
@@ -140,6 +165,18 @@ export default {
 
       if (this.selected == "Create New Collect")
         this.$router.push({ name: "CreateCollect" });
+
+      if (this.selected == "Package Accepted")
+        this.$router.push({ name: "PackageAccepted" });
+
+      if (this.selected == "Package Delivered")
+        this.$router.push({ name: "PackageDelivered" });
+
+      if (this.selected == "Settlement")
+        this.$router.push({ name: "Settlement" });
+
+      if (this.selected == "Bundle Returned")
+        this.$router.push({ name: "BundleReturned" });
 
       if (this.selected == "Get All Cities")
         this.$router.push({ name: "GetAllCities" });
