@@ -5,12 +5,10 @@
     <v-divider class="ma-2"></v-divider>
 
     <v-alert
-      >Culpa enim dolor anim veniam commodo ea fugiat ad dolore anim. Ad do
-      labore fugiat elit laborum ex eu minim. Nostrud exercitation dolor veniam
-      minim voluptate eu. Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Ab perspiciatis optio corporis iusto nihil ipsum ex numquam, enim
-      quidem saepe at ullam harum mollitia sunt architecto totam cupiditate
-      aperiam obcaecati?
+      >Webhooks are automated messages sent from apps when something happens.
+      They have a message—or payload—and are sent to a unique URL—essentially
+      the app's phone number or address. Webhooks are almost always faster than
+      polling, and require less work on your end.
     </v-alert>
 
     <div>
