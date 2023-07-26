@@ -26,6 +26,29 @@
         </li>
       </ul>
 
+      <div class="text-subtitle-1 font-weight-black mt-3">Return example:</div>
+      <v-alert>
+        <code>
+          <pre>
+{
+  "type":"“settlement”",
+  "ref_number" : null,
+  
+  //the accepted package
+  "packages" : [
+    {
+      "code": "H-1-TIP-43432",
+      "store_sub_sender" : 123,
+      "store_reference_id" : 123
+    }
+  ],
+  "time_stamp":"2023-01-24 09:00:00"
+}
+            </pre
+          >
+        </code>
+      </v-alert>
+
       <div class="text-subtitle-1 font-weight-black mt-3">Payload Schema:</div>
       <v-table density="compact">
         <thead style="background-color: lightblue">

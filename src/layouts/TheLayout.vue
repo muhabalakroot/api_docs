@@ -1,6 +1,5 @@
 <template>
   <v-layout class="rounded rounded-md">
-    <v-app-bar flat height="100"> </v-app-bar>
     <v-main @click.stop="drawer = !drawer">
       <v-expand-x-transition>
         <slot></slot>
