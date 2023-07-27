@@ -32,7 +32,8 @@
               prepend-icon="mdi-folder-outline"
               v-bind="props"
               title="Authentication"
-            ></v-list-item>
+            >
+            </v-list-item>
           </template>
 
           <v-list-item
@@ -102,12 +103,12 @@
           ></v-list-item>
         </v-list-group>
 
-        <v-list-group value="Utils">
+        <v-list-group value="Utilities">
           <template v-slot:activator="{ props }">
             <v-list-item
               prepend-icon="mdi-folder-outline"
               v-bind="props"
-              title="Utils"
+              title="Utilities"
             ></v-list-item>
           </template>
 
@@ -138,7 +139,7 @@ export default {
       "Settlement",
       "Bundle Returned",
     ],
-    utils: ["Get All Cities", "Get All SubCities"],
+    utils: ["Get All Cities", "Get All SubCities", "Delivery Calculation"],
   }),
   methods: {
     navigat() {

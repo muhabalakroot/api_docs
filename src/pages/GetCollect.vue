@@ -2,6 +2,8 @@
   <v-card class="ma-4 pa-6">
     <div class="mb-2 text-h3" align="center">Collect</div>
 
+    <TheEnviromentSelecter></TheEnviromentSelecter>
+
     <v-divider class="ma-2"></v-divider>
 
     <v-alert
@@ -27,7 +29,11 @@
       <ul class="ml-5">
         <li>
           <v-alert>
-            <code>https://app.vanex.ly/api/v1/customer/collects/:id/show</code>
+            <code
+              >{{
+                activeEnviroment || "(Chose an Enviroment)"
+              }}/customer/collects/:id/show</code
+            >
           </v-alert>
         </li>
       </ul>
@@ -42,7 +48,9 @@
         <li>
           <v-alert>
             <code
-              >https://app.vanex.ly/api/v1/customer/collects/12345/show</code
+              >{{
+                activeEnviroment || "(Chose an Enviroment)"
+              }}/customer/collects/12345/show</code
             >
           </v-alert>
         </li>
@@ -281,6 +289,38 @@
     </div>
   </v-card>
 </template>
+<script>
+import { mapState } from "pinia";
+import { mapActions } from "pinia";
+import { useEnviromentStore } from "@/stores/EnviromentStore.js";
+
+import TheEnviromentSelecter from "@/components/TheEnviromentSelecter.vue";
+export default {
+  components: {
+    TheEnviromentSelecter,
+  },
+  data() {
+    return {
+      value: "",
+    };
+  },
+  computed: {
+    ...mapState(useEnviromentStore, [
+      "mainEnviroment",
+      "testEnviroment",
+      "activeEnviroment",
+    ]),
+  },
+  methods: {
+    ...mapActions(useEnviromentStore, ["changeActive"]),
+  },
+  watch: {
+    value() {
+      this.changeActive(this.value);
+    },
+  },
+};
+</script>
 <style>
 code {
   color: red;

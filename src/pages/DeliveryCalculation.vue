@@ -12,7 +12,7 @@
     </v-alert>
 
     <div>
-      <div class="ma-2 text-h4">Get All Cities</div>
+      <div class="ma-2 text-h4">Delivery Calculation</div>
 
       <v-divider class="ma-2"></v-divider>
 
@@ -20,7 +20,12 @@
         Brief description:
       </div>
       <ul class="ml-5">
-        <li>It allows users to get all of the Cities with there IDs.</li>
+        <li>
+          This endpoint is used to calculate the delivery cost and estimated
+          time for a specific city or region. It takes the origin and
+          destination cities/regions along with package details as input and
+          returns the calculated cost and estimated delivery time.
+        </li>
       </ul>
 
       <div class="text-subtitle-1 font-weight-black mt-3">Request URL:</div>
@@ -30,7 +35,7 @@
             <code
               >{{
                 activeEnviroment || "(Chose an Enviroment)"
-              }}/city/names</code
+              }}/city/:city_id/subs</code
             >
           </v-alert>
         </li>
@@ -48,13 +53,13 @@
             <code
               >{{
                 activeEnviroment || "(Chose an Enviroment)"
-              }}/city/names</code
+              }}/city/1/subs</code
             >
           </v-alert>
         </li>
       </ul>
 
-      <!-- <div class="text-subtitle-1 font-weight-black mt-3">Query Params:</div>
+      <div class="text-subtitle-1 font-weight-black mt-3">Query Params:</div>
       <v-table density="compact">
         <thead style="background-color: lightblue">
           <tr>
@@ -72,62 +77,50 @@
             <td>pagenation</td>
           </tr>
         </tbody>
-      </v-table> -->
+      </v-table>
 
       <div class="text-subtitle-1 font-weight-black mt-3">Return example:</div>
       <v-alert>
         <code>
           <pre>
 {
-    "status_code": 200,
-    "message": "قائمة أسماء المدن",
-    "data": [
-        {
-            "id": 1,
-            "name": "طرابلس",
-            "name_en": "Tripoli",
-            "code": "TIP",
-            "price": 10,
-            "branch": 1,
-            "est_time": "يوم",
-            "region": "TIP",
-            "branch_region_details": {
-                "id": 1,
-                "name": "طرابلس"
-            }
-        },
-        {
-            "id": 2,
-            "name": "بنغازي",
-            "name_en": "Benghazi",
-            "code": "BEN",
-            "price": 30,
-            "branch": 1,
-            "est_time": "ثلاثة أيام",
-            "region": "BEN",
-            "branch_region_details": {
-                "id": 1,
-                "name": "طرابلس"
-            }
-        },
-        {
-            "id": 3,
-            "name": "سبها",
-            "name_en": "Sebha",
-            "code": "SBH",
-            "price": 30,
-            "branch": 1,
-            "est_time": "من ثلاثة إلى خمسة أيام",
-            "region": "STH",
-            "branch_region_details": {
-                "id": 1,
-                "name": "طرابلس"
-            }
-        },
-    ],
-    "errors": false
-}
-          </pre>
+      "status_code": 200,
+      "message": "قائمة مناطق المدينة رقم : 1",
+      "data": {
+          "data": [
+              {
+                  "id": 70,
+                  "name": "السياحية",
+                  "code": "TIP",
+                  "name_en": "Seyahia",
+                  "region": "TIP",
+                  "price": 10,
+                  "est_time": null
+              },
+              {
+                  "id": 71,
+                  "name": "حي الأندلس",
+                  "code": "TIP",
+                  "name_en": "Hay alandulus",
+                  "region": "TIP",
+                  "price": 10,
+                  "est_time": null
+              },
+              {
+                  "id": 73,
+                  "name": "الظهرة",
+                  "code": "TIP",
+                  "name_en": "aldahraa",
+                  "region": "TIP",
+                  "price": 10,
+                  "est_time": null
+              },
+          ]
+      },
+      "errors": false
+  }
+            </pre
+          >
         </code>
       </v-alert>
 
@@ -184,11 +177,6 @@
             <td>Price of the city</td>
           </tr>
           <tr>
-            <td>branch</td>
-            <td>Number</td>
-            <td>Branch code</td>
-          </tr>
-          <tr>
             <td>est_time</td>
             <td>String</td>
             <td>Estimated time for delivery</td>
@@ -197,11 +185,6 @@
             <td>region</td>
             <td>String</td>
             <td>Region code</td>
-          </tr>
-          <tr>
-            <td>branch_region_details</td>
-            <td>object</td>
-            <td>Details of the branch region</td>
           </tr>
           <tr>
             <td>errors</td>

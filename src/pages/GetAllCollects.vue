@@ -2,6 +2,8 @@
   <v-card class="ma-4 pa-6">
     <div class="mb-2 text-h3" align="center">Collect</div>
 
+    <TheEnviromentSelecter></TheEnviromentSelecter>
+
     <v-divider class="ma-2"></v-divider>
 
     <v-alert
@@ -27,7 +29,11 @@
       <ul class="ml-5">
         <li>
           <v-alert>
-            <code>https://app.vanex.ly/api/v1/customer/collects</code>
+            <code
+              >{{
+                activeEnviroment || "(Chose an Enviroment)"
+              }}/customer/collects</code
+            >
           </v-alert>
         </li>
       </ul>
@@ -41,7 +47,11 @@
       <ul class="ml-5">
         <li>
           <v-alert>
-            <code>https://app.vanex.ly/api/v1/customer/collects?page=1</code>
+            <code
+              >{{
+                activeEnviroment || "(Chose an Enviroment)"
+              }}/customer/collects?page=1</code
+            >
           </v-alert>
         </li>
       </ul>
@@ -104,10 +114,16 @@
             },
         ],
         "links": {
-            "first": "https://app.vanex.ly/api/v1/customer/collects?page=1",
-            "last": "https://app.vanex.ly/api/v1/customer/collects?page=5",
+            "first": "{{
+              activeEnviroment || "(Chose an Enviroment)"
+            }}/customer/collects?page=1",
+            "last": "{{
+              activeEnviroment || "(Chose an Enviroment)"
+            }}/customer/collects?page=5",
             "prev": null,
-            "next": "https://app.vanex.ly/api/v1/customer/collects?page=2"
+            "next": "{{
+              activeEnviroment || "(Chose an Enviroment)"
+            }}/customer/collects?page=2"
         },
         "meta": {
             "current_page": 1,
@@ -120,22 +136,30 @@
                     "active": false
                 },
                 {
-                    "url": "https://app.vanex.ly/api/v1/customer/collects?page=1",
+                    "url": "{{
+              activeEnviroment || "(Chose an Enviroment)"
+            }}/customer/collects?page=1",
                     "label": "1",
                     "active": true
                 },
                 {
-                    "url": "https://app.vanex.ly/api/v1/customer/collects?page=2",
+                    "url": "{{
+              activeEnviroment || "(Chose an Enviroment)"
+            }}/customer/collects?page=2",
                     "label": "2",
                     "active": false
                 },
                 {
-                    "url": "https://app.vanex.ly/api/v1/customer/collects?page=2",
+                    "url": "{{
+              activeEnviroment || "(Chose an Enviroment)"
+            }}/customer/collects?page=2",
                     "label": "التالي &raquo;",
                     "active": false
                 }
             ],
-            "path": "https://app.vanex.ly/api/v1/customer/collects",
+            "path": "{{
+              activeEnviroment || "(Chose an Enviroment)"
+            }}/customer/collects",
             "per_page": 10,
             "to": 10,
             "total": 41
@@ -377,6 +401,38 @@
     </div>
   </v-card>
 </template>
+<script>
+import { mapState } from "pinia";
+import { mapActions } from "pinia";
+import { useEnviromentStore } from "@/stores/EnviromentStore.js";
+
+import TheEnviromentSelecter from "@/components/TheEnviromentSelecter.vue";
+export default {
+  components: {
+    TheEnviromentSelecter,
+  },
+  data() {
+    return {
+      value: "",
+    };
+  },
+  computed: {
+    ...mapState(useEnviromentStore, [
+      "mainEnviroment",
+      "testEnviroment",
+      "activeEnviroment",
+    ]),
+  },
+  methods: {
+    ...mapActions(useEnviromentStore, ["changeActive"]),
+  },
+  watch: {
+    value() {
+      this.changeActive(this.value);
+    },
+  },
+};
+</script>
 <style>
 code {
   color: red;
