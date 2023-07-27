@@ -145,9 +145,11 @@ export default {
     navigat() {
       if (this.selected == "Preface") this.$router.push({ name: "Preface" });
 
+      // Authentication
       if (this.selected == "Login")
         this.$router.push({ name: "Authentication" });
 
+      //Packages
       if (this.selected == "Get Package")
         this.$router.push({ name: "GetPackage" });
 
@@ -157,6 +159,7 @@ export default {
       if (this.selected == "Create New Package")
         this.$router.push({ name: "CreatePackage" });
 
+      //Collects
       if (this.selected == "Get Collect")
         this.$router.push({ name: "GetCollect" });
 
@@ -166,6 +169,7 @@ export default {
       if (this.selected == "Create New Collect")
         this.$router.push({ name: "CreateCollect" });
 
+      // Web Hook
       if (this.selected == "Package Accepted")
         this.$router.push({ name: "PackageAccepted" });
 
@@ -178,11 +182,15 @@ export default {
       if (this.selected == "Bundle Returned")
         this.$router.push({ name: "BundleReturned" });
 
+      // Utilities
       if (this.selected == "Get All Cities")
         this.$router.push({ name: "GetAllCities" });
 
       if (this.selected == "Get All SubCities")
         this.$router.push({ name: "GetAllSubCities" });
+
+      if (this.selected == "Delivery Calculation")
+        this.$router.push({ name: "DeliveryCalculation" });
     },
   },
 };

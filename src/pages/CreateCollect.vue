@@ -186,7 +186,6 @@
 </template>
 <script>
 import { mapState } from "pinia";
-import { mapActions } from "pinia";
 import { useEnviromentStore } from "@/stores/EnviromentStore.js";
 
 import TheEnviromentSelecter from "@/components/TheEnviromentSelecter.vue";
@@ -194,25 +193,8 @@ export default {
   components: {
     TheEnviromentSelecter,
   },
-  data() {
-    return {
-      value: "",
-    };
-  },
   computed: {
-    ...mapState(useEnviromentStore, [
-      "mainEnviroment",
-      "testEnviroment",
-      "activeEnviroment",
-    ]),
-  },
-  methods: {
-    ...mapActions(useEnviromentStore, ["changeActive"]),
-  },
-  watch: {
-    value() {
-      this.changeActive(this.value);
-    },
+    ...mapState(useEnviromentStore, ["activeEnviroment"]),
   },
 };
 </script>

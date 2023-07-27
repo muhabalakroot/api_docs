@@ -9,8 +9,8 @@ export const useEnviromentStore = defineStore("EnviromentStore", {
     };
   },
   actions: {
-    changeActive(v) {
-      this.activeEnviroment = v;
+    changeActive(newValue) {
+      this.activeEnviroment = newValue;
     },
   },
 });

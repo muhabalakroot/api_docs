@@ -35,7 +35,7 @@
             <code
               >{{
                 activeEnviroment || "(Chose an Enviroment)"
-              }}/city/:city_id/subs</code
+              }}/delivery-calculation</code
             >
           </v-alert>
         </li>
@@ -53,7 +53,7 @@
             <code
               >{{
                 activeEnviroment || "(Chose an Enviroment)"
-              }}/city/1/subs</code
+              }}/delivery-calculation?destination=2&sub_city_id=125&sender_region=1&height=35&leangh=35&width=35&price=11&delivery_type=1</code
             >
           </v-alert>
         </li>
@@ -71,10 +71,52 @@
         </thead>
         <tbody>
           <tr>
-            <td>page</td>
-            <td>no</td>
+            <td>destination</td>
+            <td>yes</td>
             <td>Number</td>
-            <td>pagenation</td>
+            <td>The ID of the destination region</td>
+          </tr>
+          <tr>
+            <td>sub_city_id</td>
+            <td>yes</td>
+            <td>Number</td>
+            <td>The ID of the sub-city</td>
+          </tr>
+          <tr>
+            <td>sender_region</td>
+            <td>yes</td>
+            <td>Number</td>
+            <td>The ID of the sender region</td>
+          </tr>
+          <tr>
+            <td>height</td>
+            <td>yes</td>
+            <td>Number</td>
+            <td>The height of the package</td>
+          </tr>
+          <tr>
+            <td>leangh</td>
+            <td>yes</td>
+            <td>Number</td>
+            <td>The length of the package</td>
+          </tr>
+          <tr>
+            <td>width</td>
+            <td>yes</td>
+            <td>Number</td>
+            <td>The width of the package</td>
+          </tr>
+          <tr>
+            <td>price</td>
+            <td>yes</td>
+            <td>Number</td>
+            <td>The price of the package</td>
+          </tr>
+          <tr>
+            <td>delivery_type</td>
+            <td>yes</td>
+            <td>Number</td>
+            <td>The type of delivery</td>
           </tr>
         </tbody>
       </v-table>
@@ -84,41 +126,19 @@
         <code>
           <pre>
 {
-      "status_code": 200,
-      "message": "قائمة مناطق المدينة رقم : 1",
-      "data": {
-          "data": [
-              {
-                  "id": 70,
-                  "name": "السياحية",
-                  "code": "TIP",
-                  "name_en": "Seyahia",
-                  "region": "TIP",
-                  "price": 10,
-                  "est_time": null
-              },
-              {
-                  "id": 71,
-                  "name": "حي الأندلس",
-                  "code": "TIP",
-                  "name_en": "Hay alandulus",
-                  "region": "TIP",
-                  "price": 10,
-                  "est_time": null
-              },
-              {
-                  "id": 73,
-                  "name": "الظهرة",
-                  "code": "TIP",
-                  "name_en": "aldahraa",
-                  "region": "TIP",
-                  "price": 10,
-                  "est_time": null
-              },
-          ]
-      },
-      "errors": false
-  }
+    "status_code": 200,
+    "message": "سعر شحن متاجر هوا 30 دينار ليبي.",
+    "sender_region": "طرابلس",
+    "destination": "شبنة",
+    "delivery_type": "متاجر",
+    "estimated_duration": "من ثلاثة إلى خمسة أيام",
+    "destination_price": 30,
+    "extra_size_price": 0,
+    "est_days_int": 0,
+    "commission_price": 0,
+    "delivery_price": 30,
+    "errors": false
+}
             </pre
           >
         </code>
@@ -139,57 +159,62 @@
           <tr>
             <td>status_code</td>
             <td>Number</td>
-            <td>The status code of the response.</td>
+            <td>HTTP status code for the response.</td>
           </tr>
           <tr>
             <td>message</td>
             <td>String</td>
-            <td>A message associated with the response.</td>
+            <td>A message indicating the pricing for the delivery service.</td>
           </tr>
           <tr>
-            <td>data</td>
-            <td>Object</td>
-            <td>Contains detailed information about the collect.</td>
+            <td>sender_region</td>
+            <td>String</td>
+            <td>The name of the sender region.</td>
           </tr>
           <tr>
-            <td>id</td>
+            <td>destination</td>
+            <td>String</td>
+            <td>The name of the destination region.</td>
+          </tr>
+          <tr>
+            <td>delivery_type</td>
+            <td>String</td>
+            <td>The type of delivery service.</td>
+          </tr>
+          <tr>
+            <td>estimated_duration</td>
+            <td>String</td>
+            <td>The estimated duration for delivery.</td>
+          </tr>
+          <tr>
+            <td>destination_price</td>
             <td>Number</td>
-            <td>ID of the city</td>
+            <td>The price for delivery to the destination.</td>
           </tr>
           <tr>
-            <td>name</td>
-            <td>String</td>
-            <td>Name of the city in Arabic</td>
-          </tr>
-          <tr>
-            <td>name_en</td>
-            <td>String</td>
-            <td>Name of the city in English</td>
-          </tr>
-          <tr>
-            <td>code</td>
-            <td>String</td>
-            <td>Code of the city</td>
-          </tr>
-          <tr>
-            <td>price</td>
+            <td>extra_size_price</td>
             <td>Number</td>
-            <td>Price of the city</td>
+            <td>The additional price for extra-sized packages.</td>
           </tr>
           <tr>
-            <td>est_time</td>
-            <td>String</td>
-            <td>Estimated time for delivery</td>
+            <td>est_days_int</td>
+            <td>Number</td>
+            <td>The estimated number of days for delivery as an integer.</td>
           </tr>
           <tr>
-            <td>region</td>
-            <td>String</td>
-            <td>Region code</td>
+            <td>commission_price</td>
+            <td>Number</td>
+            <td>The commission price for the delivery.</td>
+          </tr>
+          <tr>
+            <td>delivery_price</td>
+            <td>Number</td>
+            <td>The total delivery price.</td>
           </tr>
           <tr>
             <td>errors</td>
             <td>Boolean</td>
-            <td>Indicator for any errors.</td>
+            <td>Indicates if there are any errors in the response.</td>
           </tr>
         </tbody>
       </v-table>
@@ -198,7 +223,6 @@
 </template>
 <script>
 import { mapState } from "pinia";
-import { mapActions } from "pinia";
 import { useEnviromentStore } from "@/stores/EnviromentStore.js";
 
 import TheEnviromentSelecter from "@/components/TheEnviromentSelecter.vue";
@@ -206,25 +230,8 @@ export default {
   components: {
     TheEnviromentSelecter,
   },
-  data() {
-    return {
-      value: "",
-    };
-  },
   computed: {
-    ...mapState(useEnviromentStore, [
-      "mainEnviroment",
-      "testEnviroment",
-      "activeEnviroment",
-    ]),
-  },
-  methods: {
-    ...mapActions(useEnviromentStore, ["changeActive"]),
-  },
-  watch: {
-    value() {
-      this.changeActive(this.value);
-    },
+    ...mapState(useEnviromentStore, ["activeEnviroment"]),
   },
 };
 </script>

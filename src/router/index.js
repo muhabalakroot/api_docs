@@ -115,6 +115,14 @@ const routes = [
       layout: TheLayout,
     },
   },
+  {
+    path: "/DeliveryCalculation",
+    component: () => import("@/pages/DeliveryCalculation.vue"),
+    name: "DeliveryCalculation",
+    meta: {
+      layout: TheLayout,
+    },
+  },
 ];
 
 const router = createRouter({
