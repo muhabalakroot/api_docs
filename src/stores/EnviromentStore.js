@@ -4,7 +4,7 @@ export const useEnviromentStore = defineStore("EnviromentStore", {
   state: () => {
     return {
       mainEnviroment: "https://app.vanex.ly/api/v1",
-      testEnviroment: "https://app.testvanex.ly/api/v1",
+      testEnviroment: " https://testing.vanex.ly/api/v1",
       activeEnviroment: "",
     };
   },

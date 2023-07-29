@@ -84,7 +84,7 @@
           ></v-list-item>
         </v-list-group>
 
-        <v-list-group value="webHook">
+        <!-- <v-list-group value="webHook">
           <template v-slot:activator="{ props }">
             <v-list-item
               prepend-icon="mdi-folder-outline"
@@ -101,7 +101,7 @@
             :title="title"
             prepend-icon="mdi-note-text-outline"
           ></v-list-item>
-        </v-list-group>
+        </v-list-group> -->
 
         <v-list-group value="Utilities">
           <template v-slot:activator="{ props }">
