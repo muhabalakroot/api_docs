@@ -4,7 +4,7 @@ import TheLayout from "@/layouts/TheLayout.vue";
 
 const routes = [
   {
-    path: "/preface",
+    path: "/",
     component: () => import("@/pages/Preface.vue"),
     name: "Preface",
     meta: {
@@ -35,6 +35,31 @@ const routes = [
       layout: TheLayout,
     },
   },
+  //Get Packages By Their Statuse
+  {
+    path: "/GetPackagesOnTrack",
+    component: () => import("@/pages/GetPackagesOnTrack.vue"),
+    name: "GetPackagesOnTrack",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetDeliveredPackages",
+    component: () => import("@/pages/GetDeliveredPackages.vue"),
+    name: "GetDeliveredPackages",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetPendingPackages",
+    component: () => import("@/pages/GetPendingPackages.vue"),
+    name: "GetPendingPackages",
+    meta: {
+      layout: TheLayout,
+    },
+  },
   {
     path: "/CreatePackage",
     component: () => import("@/pages/CreatePackage.vue"),
@@ -43,6 +68,15 @@ const routes = [
       layout: TheLayout,
     },
   },
+  {
+    path: "/GetReturnedPackages",
+    component: () => import("@/pages/GetReturnedPackages.vue"),
+    name: "GetReturnedPackages",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  //collects
   {
     path: "/GetCollect",
     component: () => import("@/pages/GetCollect.vue"),

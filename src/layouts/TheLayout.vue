@@ -5,7 +5,7 @@
         <slot></slot>
       </v-expand-x-transition>
     </v-main>
-    <v-navigation-drawer width="300" permanent class="px-2 py-6">
+    <v-navigation-drawer width="300" permanent class="py-6">
       <v-img
         src="./../assets/logo-primary.svg"
         max-width="300"
@@ -58,6 +58,19 @@
           <v-list-item
             color="primary"
             v-for="(title, i) in packages"
+            :key="i"
+            :title="title"
+            :value="title"
+            prepend-icon="mdi-note-text-outline"
+          ></v-list-item>
+
+          <v-divider class="ma-2"></v-divider>
+          <div class="text-subtitle-2 pl-16">Get Packages By their Status</div>
+          <v-divider class="ma-2"></v-divider>
+
+          <v-list-item
+            color="primary"
+            v-for="(title, i) in getPackages"
             :key="i"
             :title="title"
             :value="title"
@@ -132,6 +145,12 @@ export default {
     open: ["Users"],
     auth: [["Login", "mdi-note-text-outline"]],
     packages: ["Get Package", "Get All Package", "Create New Package"],
+    getPackages: [
+      "Get Packages On Track",
+      "Get Delivered Packages",
+      "Get Pending Packages",
+      "Get Returned Packages",
+    ],
     collects: ["Get Collect", "Get All Collects", "Create New Collect"],
     webHooks: [
       "Package Accepted",
@@ -158,6 +177,19 @@ export default {
 
       if (this.selected == "Create New Package")
         this.$router.push({ name: "CreatePackage" });
+
+      //Get Packages
+      if (this.selected == "Get Packages On Track")
+        this.$router.push({ name: "GetPackagesOnTrack" });
+
+      if (this.selected == "Get Delivered Packages")
+        this.$router.push({ name: "GetDeliveredPackages" });
+
+      if (this.selected == "Get Pending Packages")
+        this.$router.push({ name: "GetPendingPackages" });
+
+      if (this.selected == "Get Returned Packages")
+        this.$router.push({ name: "GetReturnedPackages" });
 
       //Collects
       if (this.selected == "Get Collect")
