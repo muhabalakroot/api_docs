@@ -67,6 +67,8 @@
         <code>
           <pre>
 {
+    "status_code": 200,
+    "message": "قيد الشحن.",
     "data": {
         "package-code": "1-BEN-1234567",
         "package_type": {

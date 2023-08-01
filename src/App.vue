@@ -3,5 +3,3 @@
     <router-view />
   </component>
 </template>
-
-<script></script>

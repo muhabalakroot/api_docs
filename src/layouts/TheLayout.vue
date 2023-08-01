@@ -1,16 +1,31 @@
 <template>
   <v-layout class="rounded rounded-md">
+    <v-app-bar scroll-behavior="collapse" :elevation="2">
+      <template v-slot:prepend>
+        <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
+      </template>
+
+      <v-row>
+        <v-col cols="4"></v-col>
+        <v-col cols="4" align="center"
+          ><v-img
+            src="./../assets/logo-primary.svg"
+            max-width="200"
+            class="px-2"
+          ></v-img
+        ></v-col>
+        <v-col cols="4" align="center"> </v-col>
+      </v-row>
+    </v-app-bar>
+
     <v-main @click.stop="drawer = !drawer">
       <v-expand-x-transition>
-        <slot></slot>
+        <v-container>
+          <slot></slot>
+        </v-container>
       </v-expand-x-transition>
     </v-main>
-    <v-navigation-drawer width="300" permanent class="py-6">
-      <v-img
-        src="./../assets/logo-primary.svg"
-        max-width="300"
-        class="px-2"
-      ></v-img>
+    <v-navigation-drawer temporary v-model="drawer" width="300" class="py-6">
       <v-list
         :lines="false"
         density="compact"
@@ -142,6 +157,7 @@
 export default {
   data: () => ({
     selected: null,
+    drawer: null,
     open: ["Users"],
     auth: [["Login", "mdi-note-text-outline"]],
     packages: ["Get Package", "Get All Package", "Create New Package"],
@@ -161,6 +177,9 @@ export default {
     utils: ["Get All Cities", "Get All SubCities", "Delivery Calculation"],
   }),
   methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    },
     navigat() {
       if (this.selected == "Preface") this.$router.push({ name: "Preface" });
 
