@@ -253,54 +253,6 @@ export default {
     navigat() {
       if (this.selected == "Preface") this.$router.push({ name: "Preface" });
 
-      //Safe Storage
-      //Orders
-      if (this.selected == "Get Storage Order")
-        this.$router.push({ name: "GetStorageOrder" });
-
-      if (this.selected == "Get All Storage Orders")
-        this.$router.push({ name: "GetAllStorageOrders" });
-
-      if (this.selected == "Create New Order")
-        this.$router.push({ name: "CreateNewOrder" });
-
-      if (this.selected == "Delete Order")
-        this.$router.push({ name: "DeleteOrder" });
-
-      //Products
-      if (this.selected == "Get Stored Product")
-        this.$router.push({ name: "GetStoredProduct" });
-
-      if (this.selected == "Get All Stored Products")
-        this.$router.push({ name: "GetAllStoredProducts" });
-
-      if (this.selected == "Store New Product")
-        this.$router.push({ name: "StoreNewProduct" });
-
-      if (this.selected == "Delete Product")
-        this.$router.push({ name: "DeleteProduct" });
-
-      //Utilities
-      if (this.selected == "Get Product Types")
-        this.$router.push({ name: "GetProductTypes" });
-
-      if (this.selected == "Get Storage Statuses")
-        this.$router.push({ name: "GetStorageStatuses" });
-
-      if (this.selected == "Get Storage Types")
-        this.$router.push({ name: "GetStorageTypes" });
-
-      if (this.selected == "Get Storage Sub Types")
-        this.$router.push({ name: "GetStorageSubTypes" });
-
-      if (this.selected == "Get Product Storage Specs")
-        this.$router.push({ name: "GetProductStorageSpecs" });
-
-      if (this.selected == "Get Product Storage Prices")
-        this.$router.push({ name: "GetProductStoragePrices" });
-
-      if (this.selected == "Get Color") this.$router.push({ name: "GetColor" });
-
       // Authentication
       if (this.selected == "Login")
         this.$router.push({ name: "Authentication" });
@@ -350,6 +302,54 @@ export default {
 
       if (this.selected == "Bundle Returned")
         this.$router.push({ name: "BundleReturned" });
+
+      //Safe Storage
+      //Orders
+      if (this.selected == "Get Storage Order")
+        this.$router.push({ name: "GetStorageOrder" });
+
+      if (this.selected == "Get All Storage Orders")
+        this.$router.push({ name: "GetAllStorageOrders" });
+
+      if (this.selected == "Create New Order")
+        this.$router.push({ name: "CreateNewOrder" });
+
+      if (this.selected == "Delete Order")
+        this.$router.push({ name: "DeleteOrder" });
+
+      //Products
+      if (this.selected == "Get Stored Product")
+        this.$router.push({ name: "GetStoredProduct" });
+
+      if (this.selected == "Get All Stored Products")
+        this.$router.push({ name: "GetAllStoredProducts" });
+
+      if (this.selected == "Store New Product")
+        this.$router.push({ name: "StoreNewProduct" });
+
+      if (this.selected == "Delete Product")
+        this.$router.push({ name: "DeleteProduct" });
+
+      //Utilities
+      if (this.selected == "Get Product Types")
+        this.$router.push({ name: "GetProductTypes" });
+
+      if (this.selected == "Get Storage Statuses")
+        this.$router.push({ name: "GetStorageStatuses" });
+
+      if (this.selected == "Get Storage Types")
+        this.$router.push({ name: "GetStorageTypes" });
+
+      if (this.selected == "Get Storage Sub Types")
+        this.$router.push({ name: "GetStorageSubTypes" });
+
+      if (this.selected == "Get Product Storage Specs")
+        this.$router.push({ name: "GetProductStorageSpecs" });
+
+      if (this.selected == "Get Product Storage Prices")
+        this.$router.push({ name: "GetProductStoragePrices" });
+
+      if (this.selected == "Get Color") this.$router.push({ name: "GetColor" });
 
       // Utilities
       if (this.selected == "Get All Cities")
