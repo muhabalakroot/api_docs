@@ -131,6 +131,55 @@
           ></v-list-item>
         </v-list-group> -->
 
+        <v-list-group value="Safe Storage Feature">
+          <template v-slot:activator="{ props }">
+            <v-list-item
+              prepend-icon="mdi-folder-outline"
+              v-bind="props"
+              title="Safe Storage Feature"
+            ></v-list-item>
+          </template>
+
+          <v-divider class="ma-2"></v-divider>
+          <div class="text-subtitle-2 pl-16">Order CRUDs</div>
+          <v-divider class="ma-2"></v-divider>
+
+          <v-list-item
+            color="primary"
+            v-for="(title, i) in safeStorageOrders"
+            :key="i"
+            :value="title"
+            :title="title"
+            prepend-icon="mdi-note-text-outline"
+          ></v-list-item>
+
+          <v-divider class="ma-2"></v-divider>
+          <div class="text-subtitle-2 pl-16">Product CRUDs</div>
+          <v-divider class="ma-2"></v-divider>
+
+          <v-list-item
+            color="primary"
+            v-for="(title, i) in safeStorageProducts"
+            :key="i"
+            :value="title"
+            :title="title"
+            prepend-icon="mdi-note-text-outline"
+          ></v-list-item>
+
+          <v-divider class="ma-2"></v-divider>
+          <div class="text-subtitle-2 pl-16">Safe Storage Utility Features</div>
+          <v-divider class="ma-2"></v-divider>
+
+          <v-list-item
+            color="primary"
+            v-for="(title, i) in safeStorageUtilities"
+            :key="i"
+            :value="title"
+            :title="title"
+            prepend-icon="mdi-note-text-outline"
+          ></v-list-item>
+        </v-list-group>
+
         <v-list-group value="Utilities">
           <template v-slot:activator="{ props }">
             <v-list-item
@@ -175,6 +224,27 @@ export default {
       "Bundle Returned",
     ],
     utils: ["Get All Cities", "Get All SubCities", "Delivery Calculation"],
+    safeStorageOrders: [
+      "Get Storage Order",
+      "Get All Storage Orders",
+      "Create New Order",
+      "Delete Order",
+    ],
+    safeStorageProducts: [
+      "Get Stored Product",
+      "Get All Stored Products",
+      "Store New Product",
+      "Delete Product",
+    ],
+    safeStorageUtilities: [
+      "Get Product Types",
+      "Get Storage Statuses",
+      "Get Storage Types",
+      "Get Storage Sub Types",
+      "Get Product Storage Specs",
+      "Get Product Storage Prices",
+      "Get Color",
+    ],
   }),
   methods: {
     toggleDrawer() {
@@ -182,6 +252,54 @@ export default {
     },
     navigat() {
       if (this.selected == "Preface") this.$router.push({ name: "Preface" });
+
+      //Safe Storage
+      //Orders
+      if (this.selected == "Get Storage Order")
+        this.$router.push({ name: "GetStorageOrder" });
+
+      if (this.selected == "Get All Storage Orders")
+        this.$router.push({ name: "GetAllStorageOrders" });
+
+      if (this.selected == "Create New Order")
+        this.$router.push({ name: "CreateNewOrder" });
+
+      if (this.selected == "Delete Order")
+        this.$router.push({ name: "DeleteOrder" });
+
+      //Products
+      if (this.selected == "Get Stored Product")
+        this.$router.push({ name: "GetStoredProduct" });
+
+      if (this.selected == "Get All Stored Products")
+        this.$router.push({ name: "GetAllStoredProducts" });
+
+      if (this.selected == "Store New Product")
+        this.$router.push({ name: "StoreNewProduct" });
+
+      if (this.selected == "Delete Product")
+        this.$router.push({ name: "DeleteProduct" });
+
+      //Utilities
+      if (this.selected == "Get Product Types")
+        this.$router.push({ name: "GetProductTypes" });
+
+      if (this.selected == "Get Storage Statuses")
+        this.$router.push({ name: "GetStorageStatuses" });
+
+      if (this.selected == "Get Storage Types")
+        this.$router.push({ name: "GetStorageTypes" });
+
+      if (this.selected == "Get Storage Sub Types")
+        this.$router.push({ name: "GetStorageSubTypes" });
+
+      if (this.selected == "Get Product Storage Specs")
+        this.$router.push({ name: "GetProductStorageSpecs" });
+
+      if (this.selected == "Get Product Storage Prices")
+        this.$router.push({ name: "GetProductStoragePrices" });
+
+      if (this.selected == "Get Color") this.$router.push({ name: "GetColor" });
 
       // Authentication
       if (this.selected == "Login")

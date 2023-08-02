@@ -133,6 +133,7 @@ const routes = [
       layout: TheLayout,
     },
   },
+  //Utilities
   {
     path: "/GetAllCities",
     component: () => import("@/pages/Utilities/GetAllCities.vue"),
@@ -153,6 +154,136 @@ const routes = [
     path: "/DeliveryCalculation",
     component: () => import("@/pages/Utilities/DeliveryCalculation.vue"),
     name: "DeliveryCalculation",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  //SafeStorages
+  {
+    path: "/GetStorageOrder",
+    component: () => import("@/pages/SafeStorage/Orderes/GetStorageOrder.vue"),
+    name: "GetStorageOrder",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetAllStorageOrders",
+    component: () =>
+      import("@/pages/SafeStorage/Orderes/GetAllStorageOrders.vue"),
+    name: "GetAllStorageOrders",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/CreateNewOrder",
+    component: () => import("@/pages/SafeStorage/Orderes/CreateNewOrder.vue"),
+    name: "CreateNewOrder",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/DeleteOrder",
+    component: () => import("@/pages/SafeStorage/Orderes/DeleteOrder.vue"),
+    name: "DeleteOrder",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetStoredProduct",
+    component: () =>
+      import("@/pages/SafeStorage/Products/GetStoredProduct.vue"),
+    name: "GetStoredProduct",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetAllStoredProducts",
+    component: () =>
+      import("@/pages/SafeStorage/Products/GetAllStoredProducts.vue"),
+    name: "GetAllStoredProducts",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/StoreNewProduct",
+    component: () => import("@/pages/SafeStorage/Products/StoreNewProduct.vue"),
+    name: "StoreNewProduct",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/DeleteProduct",
+    component: () => import("@/pages/SafeStorage/Products/DeleteProduct.vue"),
+    name: "DeleteProduct",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetProductTypes",
+    component: () =>
+      import("@/pages/SafeStorage/Utilities/GetProductTypes.vue"),
+    name: "GetProductTypes",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetStorageStatuses",
+    component: () =>
+      import("@/pages/SafeStorage/Utilities/GetStorageStatuses.vue"),
+    name: "GetStorageStatuses",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetStorageTypes",
+    component: () =>
+      import("@/pages/SafeStorage/Utilities/GetStorageTypes.vue"),
+    name: "GetStorageTypes",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetStorageSubTypes",
+    component: () =>
+      import("@/pages/SafeStorage/Utilities/GetStorageSubTypes.vue"),
+    name: "GetStorageSubTypes",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetProductStorageSpecs",
+    component: () =>
+      import("@/pages/SafeStorage/Utilities/GetProductStorageSpecs.vue"),
+    name: "GetProductStorageSpecs",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetProductStoragePrices",
+    component: () =>
+      import("@/pages/SafeStorage/Utilities/GetProductStoragePrices.vue"),
+    name: "GetProductStoragePrices",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
+    path: "/GetColor",
+    component: () => import("@/pages/SafeStorage/Utilities/GetColor.vue"),
+    name: "GetColor",
     meta: {
       layout: TheLayout,
     },

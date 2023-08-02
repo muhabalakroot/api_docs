@@ -1,0 +1,1 @@
+<template>Get Color</template>
