@@ -1,9 +1,7 @@
 <template>
-  <v-row no-gutters>
-    <v-col cols="4" xs="0"> </v-col>
-    <v-col cols="4" xs="0"> </v-col>
-    <v-col cols="4" xs="12">
-      <v-select
+  <v-row justify="end" no-gutters>
+    <v-col cols="12" sm="4"
+      ><v-select
         label="Chose an Enviroment"
         density="compact"
         width="100px"
@@ -13,8 +11,8 @@
         ]"
         variant="outlined"
         v-model="value"
-      ></v-select>
-    </v-col>
+      ></v-select
+    ></v-col>
   </v-row>
 </template>
 <script>
