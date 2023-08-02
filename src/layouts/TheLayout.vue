@@ -2,7 +2,7 @@
   <v-layout class="rounded rounded-md">
     <v-app-bar scroll-behavior="collapse" :elevation="2">
       <template v-slot:prepend>
-        <v-app-bar-nav-icon @click="toggleDrawer"></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       </template>
 
       <v-row>
@@ -18,7 +18,7 @@
       </v-row>
     </v-app-bar>
 
-    <v-main @click.stop="drawer = !drawer">
+    <v-main>
       <v-expand-x-transition>
         <v-container>
           <slot></slot>

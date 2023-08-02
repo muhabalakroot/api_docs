@@ -1,8 +1,8 @@
 <template>
-  <v-row>
-    <v-col cols="4"></v-col>
-    <v-col cols="4"></v-col>
-    <v-col cols="4">
+  <v-row no-gutters>
+    <v-col cols="4" xs="0"> </v-col>
+    <v-col cols="4" xs="0"> </v-col>
+    <v-col cols="4" xs="12">
       <v-select
         label="Chose an Enviroment"
         density="compact"

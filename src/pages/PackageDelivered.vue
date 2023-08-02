@@ -29,7 +29,7 @@
       <div class="text-subtitle-1 font-weight-black mt-3">Return example:</div>
       <v-alert>
         <code>
-          <pre>
+          <pre class="overflow-x-auto">
 {
   "type":"package_delivered",
   "ref_number" : null,

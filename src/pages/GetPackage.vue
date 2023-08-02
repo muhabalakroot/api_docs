@@ -79,7 +79,7 @@
       <div class="text-subtitle-1 font-weight-black mt-3">Return example:</div>
       <v-alert>
         <code>
-          <pre>
+          <pre class="overflow-x-auto">
 {
     "data": {
         "package-code": "1-BEN-1234567",
