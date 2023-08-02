@@ -14,7 +14,7 @@
     </v-alert>
 
     <div>
-      <div class="ma-2 text-h4">Get Delivered Packages</div>
+      <div class="ma-2 text-h4">Get Pending Packages</div>
 
       <v-divider class="ma-2"></v-divider>
 

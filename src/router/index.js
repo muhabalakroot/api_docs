@@ -21,7 +21,7 @@ const routes = [
   },
   {
     path: "/GetPackage",
-    component: () => import("@/pages/GetPackage.vue"),
+    component: () => import("@/pages/Packages/GetPackage.vue"),
     name: "GetPackage",
     meta: {
       layout: TheLayout,
@@ -29,7 +29,7 @@ const routes = [
   },
   {
     path: "/GetAllPackages",
-    component: () => import("@/pages/GetAllPackages.vue"),
+    component: () => import("@/pages/Packages/GetAllPackages.vue"),
     name: "GetAllPackages",
     meta: {
       layout: TheLayout,
@@ -38,7 +38,7 @@ const routes = [
   //Get Packages By Their Statuse
   {
     path: "/GetPackagesOnTrack",
-    component: () => import("@/pages/GetPackagesOnTrack.vue"),
+    component: () => import("@/pages/Packages/GetPackagesOnTrack.vue"),
     name: "GetPackagesOnTrack",
     meta: {
       layout: TheLayout,
@@ -46,7 +46,7 @@ const routes = [
   },
   {
     path: "/GetDeliveredPackages",
-    component: () => import("@/pages/GetDeliveredPackages.vue"),
+    component: () => import("@/pages/Packages/GetDeliveredPackages.vue"),
     name: "GetDeliveredPackages",
     meta: {
       layout: TheLayout,
@@ -54,7 +54,7 @@ const routes = [
   },
   {
     path: "/GetPendingPackages",
-    component: () => import("@/pages/GetPendingPackages.vue"),
+    component: () => import("@/pages/Packages/GetPendingPackages.vue"),
     name: "GetPendingPackages",
     meta: {
       layout: TheLayout,
@@ -62,7 +62,7 @@ const routes = [
   },
   {
     path: "/CreatePackage",
-    component: () => import("@/pages/CreatePackage.vue"),
+    component: () => import("@/pages/Packages/CreatePackage.vue"),
     name: "CreatePackage",
     meta: {
       layout: TheLayout,
@@ -70,7 +70,7 @@ const routes = [
   },
   {
     path: "/GetReturnedPackages",
-    component: () => import("@/pages/GetReturnedPackages.vue"),
+    component: () => import("@/pages/Packages/GetReturnedPackages.vue"),
     name: "GetReturnedPackages",
     meta: {
       layout: TheLayout,
@@ -79,7 +79,7 @@ const routes = [
   //collects
   {
     path: "/GetCollect",
-    component: () => import("@/pages/GetCollect.vue"),
+    component: () => import("@/pages/Collects/GetCollect.vue"),
     name: "GetCollect",
     meta: {
       layout: TheLayout,
@@ -87,7 +87,7 @@ const routes = [
   },
   {
     path: "/GetAllCollects",
-    component: () => import("@/pages/GetAllCollects.vue"),
+    component: () => import("@/pages/Collects/GetAllCollects.vue"),
     name: "GetAllCollects",
     meta: {
       layout: TheLayout,
@@ -95,7 +95,7 @@ const routes = [
   },
   {
     path: "/CreateCollect",
-    component: () => import("@/pages/CreateCollect.vue"),
+    component: () => import("@/pages/Collects/CreateCollect.vue"),
     name: "CreateCollect",
     meta: {
       layout: TheLayout,
@@ -103,7 +103,7 @@ const routes = [
   },
   {
     path: "/PackageAccepted",
-    component: () => import("@/pages/PackageAccepted.vue"),
+    component: () => import("@/pages/Webhook/PackageAccepted.vue"),
     name: "PackageAccepted",
     meta: {
       layout: TheLayout,
@@ -111,7 +111,7 @@ const routes = [
   },
   {
     path: "/PackageDelivered",
-    component: () => import("@/pages/PackageDelivered.vue"),
+    component: () => import("@/pages/Webhook/PackageDelivered.vue"),
     name: "PackageDelivered",
     meta: {
       layout: TheLayout,
@@ -119,7 +119,7 @@ const routes = [
   },
   {
     path: "/Settlement",
-    component: () => import("@/pages/Settlement.vue"),
+    component: () => import("@/pages/Webhook/Settlement.vue"),
     name: "Settlement",
     meta: {
       layout: TheLayout,
@@ -127,7 +127,7 @@ const routes = [
   },
   {
     path: "/BundleReturned",
-    component: () => import("@/pages/BundleReturned.vue"),
+    component: () => import("@/pages/Webhook/BundleReturned.vue"),
     name: "BundleReturned",
     meta: {
       layout: TheLayout,
@@ -135,7 +135,7 @@ const routes = [
   },
   {
     path: "/GetAllCities",
-    component: () => import("@/pages/GetAllCities.vue"),
+    component: () => import("@/pages/Utilities/GetAllCities.vue"),
     name: "GetAllCities",
     meta: {
       layout: TheLayout,
@@ -143,7 +143,7 @@ const routes = [
   },
   {
     path: "/GetAllSubCities",
-    component: () => import("@/pages/GetAllSubCities.vue"),
+    component: () => import("@/pages/Utilities/GetAllSubCities.vue"),
     name: "GetAllSubCities",
     meta: {
       layout: TheLayout,
@@ -151,7 +151,7 @@ const routes = [
   },
   {
     path: "/DeliveryCalculation",
-    component: () => import("@/pages/DeliveryCalculation.vue"),
+    component: () => import("@/pages/Utilities/DeliveryCalculation.vue"),
     name: "DeliveryCalculation",
     meta: {
       layout: TheLayout,
