@@ -219,6 +219,15 @@ const routes = [
     },
   },
   {
+    path: "/UpdateStoredProduct",
+    component: () =>
+      import("@/pages/SafeStorage/Products/UpdateStoredProduct.vue"),
+    name: "UpdateStoredProduct",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
     path: "/DeleteProduct",
     component: () => import("@/pages/SafeStorage/Products/DeleteProduct.vue"),
     name: "DeleteProduct",

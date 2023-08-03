@@ -234,6 +234,7 @@ export default {
       "Get Stored Product",
       "Get All Stored Products",
       "Store New Product",
+      "Update Stored Product",
       "Delete Product",
     ],
     safeStorageUtilities: [
@@ -326,6 +327,9 @@ export default {
 
       if (this.selected == "Store New Product")
         this.$router.push({ name: "StoreNewProduct" });
+
+      if (this.selected == "Update Stored Product")
+        this.$router.push({ name: "UpdateStoredProduct" });
 
       if (this.selected == "Delete Product")
         this.$router.push({ name: "DeleteProduct" });
