@@ -1,6 +1,6 @@
 <template>
   <v-layout class="rounded rounded-md">
-    <v-app-bar scroll-behavior="collapse" :elevation="2">
+    <v-app-bar>
       <template v-slot:prepend>
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       </template>
@@ -368,3 +368,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.v-navigation-drawer__scrim {
+  position: fixed;
+}
+</style>
