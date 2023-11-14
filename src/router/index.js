@@ -118,6 +118,14 @@ const routes = [
     },
   },
   {
+    path: "/PackageStorageReturn",
+    component: () => import("@/pages/Webhook/PackageStorageReturn.vue"),
+    name: "PackageStorageReturn",
+    meta: {
+      layout: TheLayout,
+    },
+  },
+  {
     path: "/Settlement",
     component: () => import("@/pages/Webhook/Settlement.vue"),
     name: "Settlement",

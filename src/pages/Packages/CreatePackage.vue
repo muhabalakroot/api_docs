@@ -254,6 +254,68 @@
         </tbody>
       </v-table>
 
+      <v-alert variant="tonal" type="info" class="mt-2"
+        >You can Optionaly add packages from the packages already stored in the
+        Safe-Storage by adding the products array as shown below</v-alert
+      >
+
+      <v-alert variant="tonal" type="warning" class="mt-2"
+        >You can only use this feature if you are subsicribed to the
+        Safe-Storage feature
+      </v-alert>
+
+      <div class="text-subtitle-1 font-weight-black mt-3">products array:</div>
+      <v-alert>
+        <code>
+          <pre class="overflow-x-auto">
+  {
+      ...
+      products: [
+          id: 12345,
+          unit_price: 1000,
+          qty: 3
+      ]
+      ...
+  }
+            </pre
+          >
+        </code>
+      </v-alert>
+
+      <div class="text-subtitle-1 font-weight-black mt-3">
+        The Product array contains:
+      </div>
+      <v-table density="compact">
+        <thead style="background-color: lightblue">
+          <tr>
+            <th class="text-left">Key</th>
+            <th class="text-left">Required</th>
+            <th class="text-left">Type</th>
+            <th class="text-left">Expanation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="text-left">id</th>
+            <th class="text-left">yes</th>
+            <th class="text-left">Number</th>
+            <th class="text-left">Id of the product stored in safe-storage</th>
+          </tr>
+          <tr>
+            <th class="text-left">unit_price</th>
+            <th class="text-left">yes</th>
+            <th class="text-left">Number</th>
+            <th class="text-left">The updated unit price of the product.</th>
+          </tr>
+          <tr>
+            <th class="text-left">qty</th>
+            <th class="text-left">yes</th>
+            <th class="text-left">Number</th>
+            <th class="text-left">The number of roducts</th>
+          </tr>
+        </tbody>
+      </v-table>
+
       <div class="text-subtitle-1 font-weight-black mt-3">Return example:</div>
       <v-alert>
         <code>
