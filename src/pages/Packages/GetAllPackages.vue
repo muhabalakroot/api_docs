@@ -50,7 +50,7 @@
             <code
               >{{
                 activeEnviroment || "(Chose an Enviroment)"
-              }}/customer/package?page=1</code
+              }}/customer/package?page=1&per-page=10&status=null</code
             >
           </v-alert>
         </li>
@@ -63,6 +63,7 @@
             <th class="text-left">Query Params</th>
             <th class="text-left">Required</th>
             <th class="text-left">Type</th>
+            <th class="text-left">values</th>
             <th class="text-left">Expanation</th>
           </tr>
         </thead>
@@ -71,7 +72,22 @@
             <td>page</td>
             <td>no</td>
             <td>Number</td>
+            <td>/</td>
             <td>pagenation</td>
+          </tr>
+          <tr>
+            <td>per-page</td>
+            <td>no</td>
+            <td>Number</td>
+            <td>/</td>
+            <td>pagenation</td>
+          </tr>
+          <tr>
+            <td>status</td>
+            <td>no</td>
+            <td>String</td>
+            <td>store-new / on-track / cant-delivery / return / store-return</td>
+            <td>Fetched Packages Status</td>
           </tr>
         </tbody>
       </v-table>
@@ -190,7 +206,7 @@
                             "est_time": null
                         },
                       ]
-                  }         
+                  }
               ]
             },
             "sub_city": {
